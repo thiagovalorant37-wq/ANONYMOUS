@@ -1,0 +1,120 @@
+{
+  "stock": {
+    "m16": {
+      "name": "M16",
+      "price": "R$ 500.000",
+      "infinite": false,
+      "quantity": 250
+    },
+    "g36": {
+      "name": "G36",
+      "price": "R$ 540.000",
+      "infinite": false,
+      "quantity": 220
+    },
+    "mp5": {
+      "name": "MP5",
+      "price": "R$ 280.000",
+      "infinite": false,
+      "quantity": 200
+    },
+    "skorpion": {
+      "name": "Skorpion",
+      "price": "R$ 200.000",
+      "infinite": false,
+      "quantity": 180
+    },
+    "ticket-corrida": {
+      "name": "Ticket Corrida",
+      "price": "R$ 17.000",
+      "infinite": false,
+      "quantity": 500
+    },
+    "tablet-corrida": {
+      "name": "Tablet Corrida",
+      "price": "R$ 24.000",
+      "infinite": false,
+      "quantity": 30
+    },
+    "sonifero": {
+      "name": "Sonífero",
+      "price": "R$ 7.850",
+      "infinite": true,
+      "quantity": null
+    },
+    "reparador-sniper": {
+      "name": "Reparador Sniper",
+      "price": "R$ 700.000",
+      "infinite": true,
+      "quantity": null
+    },
+    "reparador-fuzil": {
+      "name": "Reparador Fuzil",
+      "price": "R$ 240.000",
+      "infinite": true,
+      "quantity": null
+    },
+    "reparador-sub": {
+      "name": "Reparador Sub",
+      "price": "R$ 120.000",
+      "infinite": true,
+      "quantity": null
+    },
+    "reparador-pistol": {
+      "name": "Reparador Pistol",
+      "price": "R$ 60.000",
+      "infinite": true,
+      "quantity": null
+    },
+    "reparador-doze": {
+      "name": "Reparador Doze",
+      "price": "R$ 145.000",
+      "infinite": true,
+      "quantity": null
+    },
+    "cartao-raro-card-05": {
+      "name": "Cartão Raro (Card 05)",
+      "price": "R$ 90.000",
+      "infinite": false,
+      "quantity": 20
+    },
+    "cartao-epico-card-04": {
+      "name": "Cartão Épico (Card 04)",
+      "price": "R$ 70.000",
+      "infinite": false,
+      "quantity": 20
+    },
+    "cartao-lendario-card-03": {
+      "name": "Cartão Lendário (Card 03)",
+      "price": "R$ 50.000",
+      "infinite": false,
+      "quantity": 20
+    },
+    "cartao-incomum-card-02": {
+      "name": "Cartão Incomum (Card 02)",
+      "price": "R$ 45.000",
+      "infinite": false,
+      "quantity": 20
+    },
+    "cartao-comum-card-01": {
+      "name": "Cartão Comum (Card 01)",
+      "price": "R$ 30.000",
+      "infinite": false,
+      "quantity": 20
+    },
+    "municao-rifle": {
+      "name": "Munição Rifle",
+      "price": "R$ 1.400",
+      "infinite": false,
+      "quantity": 3000
+    },
+    "municao-pistol": {
+      "name": "Munição Pistol",
+      "price": "R$ 800",
+      "infinite": false,
+      "quantity": 3000
+    }
+  },
+  "recruitment": [],
+  "orders": []
+}

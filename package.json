@@ -1,0 +1,9 @@
+{
+  "name": "complexo-rp-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site Complexo RP com encomendas, recrutamento e painel administrativo",
+  "main": "server.js",
+  "scripts": {"start": "node server.js", "dev": "node server.js"},
+  "dependencies": {"dotenv": "^17.2.2", "express": "^5.1.0"}
+}

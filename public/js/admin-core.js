@@ -1,0 +1,11 @@
+const ADMIN_TOKEN_KEY='complexo_admin_token';
+function token(){return localStorage.getItem(ADMIN_TOKEN_KEY)}
+async function api(url,options={}){options.headers={...(options.headers||{}),Authorization:'Bearer '+(token()||''),'Content-Type':'application/json'};const r=await fetch(url,options);let d={};try{d=await r.json()}catch{}if(r.status===401){localStorage.removeItem(ADMIN_TOKEN_KEY);location.href='/admin.html';throw new Error('Sessão expirada.')}if(!r.ok)throw new Error(d.error||'Erro na API');return d}
+async function login(password){const r=await fetch('/api/admin/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password})});const d=await r.json();if(!r.ok)throw new Error(d.error||'Senha incorreta');localStorage.setItem(ADMIN_TOKEN_KEY,d.token);location.href='/admin.html'}
+function logout(){localStorage.removeItem(ADMIN_TOKEN_KEY);location.href='/admin.html'}
+function nav(active){return `<aside class="sidebar"><div class="brand">COMPLEXO <span>RP</span></div><div class="side-label">Central</div><nav class="side"><a class="${active==='dashboard'?'active':''}" href="/admin.html">⌂ Dashboard</a><a class="${active==='tickets'?'active':''}" href="/admin/tickets.html">🎫 Todos os Tickets</a><a class="${active==='recrutamentos'?'active':''}" href="/admin/recrutamentos.html">👥 Recrutamentos</a><a class="${active==='encomendas'?'active':''}" href="/admin/encomendas.html">📦 Encomendas</a><a class="${active==='estoque'?'active':''}" href="/admin/estoque.html">📊 Estoque</a><a class="${active==='config'?'active':''}" href="/admin/configuracoes.html">⚙ Configurações</a></nav><div class="side-label">Site</div><nav class="side"><a href="/">🌐 Abrir Site</a><a href="#" onclick="logout();return false">↪ Sair</a></nav></aside>`}
+function layout(active,body){return `<div class="grid-bg"></div><div class="vignette"></div><div class="shell">${nav(active)}<main class="content">${body}</main></div>`}
+function fmt(ts){return new Date(ts).toLocaleString('pt-BR')}
+function field(k,v){return `<div class="field"><b>${k}</b><span>${esc(v)}</span></div>`}
+function esc(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function status(s){return `<span class="badge ${s==='pendente'?'pending':s==='aprovado'||s==='entregue'?'ok':'no'}">${esc(s)}</span>`}
